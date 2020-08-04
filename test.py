@@ -76,4 +76,4 @@ def eval(model, dataloaders, device, n_gmm):
     precision, recall, f_score, _ = prf(gt, pred, average='binary')
     print("Precision : {:0.4f}, Recall : {:0.4f}, F-score : {:0.4f}".format(precision, recall, f_score))
     print('ROC AUC score: {:.2f}'.format(roc_auc_score(labels_total, scores_total)*100))
-    return labels_total, scores_total
+    return labels_train, labels_test, energy_train, energy_test
