@@ -17,7 +17,7 @@ class KDDCupData:
         normal_data = features[labels==0] 
         normal_labels = labels[labels==0]
 
-        n_train = int(normal_data.shape[0]*0.97)
+        n_train = int(normal_data.shape[0]*0.5)
         ixs = np.arange(normal_data.shape[0])
         np.random.shuffle(ixs)
         normal_data_test = normal_data[ixs[n_train:]]
